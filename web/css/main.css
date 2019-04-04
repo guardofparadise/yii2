@@ -743,6 +743,12 @@ ul.category-products {
   border-top: 0 none;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .category-products .panel-default .badge, .category-products li .badge {
   background:none;
   border-radius: 10px;
