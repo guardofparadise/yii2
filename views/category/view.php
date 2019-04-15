@@ -56,7 +56,7 @@ use yii\helpers\Html;
 						<?php if(!empty($products)) : ?>
 						
 							<?php foreach($products as $product) : ?>
-							<?php $i++ ?>
+							<?php $i = 0; $i++ ?>
 								<div class="col-sm-4">
 									<div class="product-image-wrapper">
 										<div class="single-products">
@@ -64,7 +64,7 @@ use yii\helpers\Html;
 												<?= Html::img("@web/images/products/{$product->img}", ['alt' => $product->name]) ?>
 												<h2>$<?= $product->price ?></h2>
 												<a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $product->id]) ?>"><?= $product->name ?></a>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												<a href="<?= \yii\helpers\Url::to(['cart/add', 'id' => $product->id]) ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											<!-- <div class="product-overlay">
 												<div class="overlay-content">
