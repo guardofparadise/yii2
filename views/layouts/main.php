@@ -314,6 +314,17 @@ ltAppAsset::register($this);
 		</div>
 		
 	</footer><!--/Footer-->
+
+	<?php 
+		\yii\bootstrap\Modal::begin([
+			'header' => '<h2>Cart</h2>',
+			'id'		 => 'cart',
+			'size'   => 'modal-lg',
+			'footer' => '<button type="button" class="btn btn-default" data-dismiss="modal">Contunue shopping!</button><button type="button" class="btn btn-success">Proceed to checkout</button><button type="button" class="btn btn-danger cleaner">Clear cart</button>'
+		]);
+
+		\yii\bootstrap\Modal::end();
+	?>
 	
 
   

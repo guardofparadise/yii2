@@ -18,7 +18,7 @@ class PostController extends Controller {
 
 		$cats = Category::find()->all();
 
-		return $this->render('show', compact('cats'))
+		return $this->render('show', compact('cats'));
 	}
 
 }

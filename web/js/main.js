@@ -9,6 +9,42 @@
 	 speed: 300
  });
 
+ $('.cleaner').on('click', function(e) {
+	 $.ajax({
+		 url: '/cart/clear',
+		 type: 'GET',
+		 success: function(res) {
+			 if(!res) alert('error');
+			 showCart(res);
+		 },
+		 error: function() {
+			 alert('error2');
+		 }
+	 })
+ })
+
+ function showCart(cart) {
+	 $('#cart .modal-body').html(cart);
+	 $('#cart').modal();
+ }
+
+ $('.add-to-cart').on('click', function(e) {
+	 e.preventDefault();
+
+	 var id = $(this).data('id');
+	 $.ajax({
+		 url: '/cart/add/',
+		 data: {id: id},
+		 type: 'GET',
+		 success: function(res) {
+			showCart(res);
+		 },
+		 error: function(){
+			 alert('reeer')
+		 }
+	 })
+ })
+
 	var RGBChange = function() {
 	  $('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
 	};	
