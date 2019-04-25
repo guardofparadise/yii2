@@ -9,7 +9,7 @@
 	 speed: 300
  });
 
-<<<<<<< HEAD
+
  $('.cleaner').on('click', function(e) {
 	 $.ajax({
 		 url: '/cart/clear',
@@ -42,22 +42,7 @@
 		 },
 		 error: function(){
 			 alert('reeer')
-=======
- $('.add-to-cart').on('click', function(e) {
-	 e.preventDefault();
-	 let id = $(this).data('id');
-	 $.ajax({
-		 url: '/cart/add',
-		 data: { id },
-		 type: 'GET',
-		 success: function(res) {
-				if(!res) alert('err');
-				console.log(res);
-				//showCart(res)
-		 },
-		 error: function(){
-			 alert('error')
->>>>>>> d3c3393ec6b5f5319c9b423b0e348bae2e66af21
+
 		 }
 	 })
  })

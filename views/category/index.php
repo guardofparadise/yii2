@@ -127,21 +127,17 @@ use yii\helpers\Html;
 																<?= Html::img("@web/images/products/{$hit->img}", ['alt' => $hit->name]) ?>
 																<h2>$<?= $hit->price ?></h2>
 																<p><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id]) ?>"><?= $hit->name ?></a></p>
-<<<<<<< HEAD
+
 																<a href="<?= \yii\helpers\Url::to(['cart/add', 'id' => $hit->id]); ?>" data-id="<?= $hit->id ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-=======
-																<a href="<?= \yii\helpers\Url::to(['cart/add', 'id' => $hit->id]); ?>" class="btn btn-default add-to-cart" data-id="<?= $hit->id ?>"><i class="fa fa-shopping-cart"></i>Add to cart</a>
->>>>>>> d3c3393ec6b5f5319c9b423b0e348bae2e66af21
+
 															</div>
 															 <div class="product-overlay">
 																<div class="overlay-content">
 																	<h2>$<?= $hit->price ?></h2>
 																	<p><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id]) ?>"><?= $hit->name ?></a></p>
-<<<<<<< HEAD
+
 																	<a href="<?= \yii\helpers\Url::to(['cart/add', 'id' => $hit->id]); ?>" data-id="<?= $hit->id ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-=======
-																	<a href="<?= \yii\helpers\Url::to(['cart/add', 'id' => $hit->id]); ?>" class="btn btn-default add-to-cart" data-id="<?= $hit->id ?>"><i class="fa fa-shopping-cart"></i>Add to cart</a>
->>>>>>> d3c3393ec6b5f5319c9b423b0e348bae2e66af21
+
 																</div>
 															</div> 
 															<?php if($hit->new) : ?>
